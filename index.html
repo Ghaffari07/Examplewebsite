@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Store</title><meta name="description" content="Online general store">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<a class="skip" href="#products">Skip to products</a>
+<header class="hdr" id="hdr"><div class="wrap hdr-in">
+  <a href="#top" class="brand"><img id="logo" alt="" hidden><span id="brandName">…</span></a>
+  <nav id="nav" class="nav" aria-label="Main"><a href="#categories">Categories</a><a href="#offers">Offers</a><a href="#about">About</a><a href="#contact">Visit us</a></nav>
+  <div class="hdr-act">
+    <button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
+    <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛒<span class="badge" id="cartCount">0</span></button>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+  </div></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-in">
+  <div><h1 id="heroTitle"></h1><p id="heroText"></p>
+    <div class="row"><a class="btn" href="#products">Shop now</a><a class="btn ghost" id="heroWa" target="_blank" rel="noopener">Order on WhatsApp</a></div></div>
+  <div class="hero-art" aria-hidden="true"><span>🥬</span><span>🍞</span><span>🥛</span><span>🍎</span></div>
+</div></section>
+<section id="categories" class="sec"><div class="wrap"><h2>Shop by category</h2><div class="cats" id="catGrid"></div></div></section>
+<section id="products" class="sec alt"><div class="wrap">
+  <h2>All products</h2>
+  <div class="bar"><input id="search" type="search" placeholder="Search products or categories" aria-label="Search products"></div>
+  <div class="chips" id="chips" role="tablist"></div>
+  <div id="status" class="status" role="status"></div>
+  <div class="grid" id="grid"></div></div></section>
+<section id="offers" class="sec"><div class="wrap"><h2>Special offers</h2><div class="grid" id="offerGrid"></div></div></section>
+<section id="about" class="sec alt"><div class="wrap two"><div><h2>About us</h2><p id="aboutText"></p></div>
+  <ul class="why" id="why"></ul></div></section>
+<section id="contact" class="sec"><div class="wrap"><h2>Store information</h2><dl class="info" id="info"></dl></div></section>
+</main>
+<footer class="ftr"><div class="wrap ftr-in"><strong id="ftName"></strong><nav aria-label="Footer"><a href="#categories">Categories</a><a href="#offers">Offers</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<div id="socials" class="socials"></div><small id="copy"></small></div></footer>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+  <div class="drawer-h"><h2>Your cart</h2><button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button></div>
+  <div class="drawer-b" id="cartItems"></div>
+  <div class="drawer-f" id="cartFoot"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script><script src="script.js"></script>
+</body></html>
